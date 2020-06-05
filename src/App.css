@@ -1,38 +1,131 @@
+body {
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 14px;
+  background-color: black;
+  color: white;
+  margin: 1em;
+}
+
 .App {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.val {
+  width: 20px;
+  height: 20px;
+  margin-right: 1px;
+}
+
+.val.active {
+  border: 1px solid white;
+}
+
+.val:hover {
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.row {
+  display: flex;
+  margin-bottom: 1px;
+  align-items: center;
+}
+
+.label {
+  width: 100px;
+  text-align: right;
+  margin-right: 0.5em;
+}
+
+.tweet {
+  display: flex;
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.tweet.active {
+  background-color: #444;
+}
+
+.tweet .text {
+  padding-bottom: 1em;
+  flex-grow: 0;
+}
+
+.tweet:hover {
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.favs,
+.rts {
+  width: 80px;
+  flex-shrink: 0;
+}
+
+.screenname {
+  width: 150px;
+  flex-shrink: 0;
+}
+
+.title {
+  display: flex;
+  font-weight: bold;
+  align-items: center;
+}
+
+.button {
+  background-color: #444;
+  border: 1px solid white;
+  border-radius: 4px;
+  margin: 0.5em;
+  padding: 0.25em;
+  width: 170px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.button:hover {
+  cursor: pointer;
+  background-color: #666;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.button.active {
+  font-weight: bold;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.options {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+}
+
+.title .date {
+  margin-left: 1em;
+}
+
+.title {
+  font-size: 16px;
+}
+
+.timestamp {
+  width: 70px;
+  flex-shrink: 0;
+}
+
+a {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.left {
+  margin-right: 1em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.right {
+  max-width: 700px;
+  min-width: 600px;
+  flex-shrink: 1;
 }

@@ -1,3 +1,11 @@
+# tweet-viz
+
+This is hackathon-grade code for visualizing tweet volume overtime and tracing retweet chronologies.
+
+Backend to-be-documented. Expects a CSV of tweets with these headers:
+
+`index,text,screen_name,created_at,user_created_at,quote_count,retweet_count,favorite_count,retweeted_status_id,retweeted_status_retweet_count,retweeted_status_favorite_count,id,followers_count,friends_count`
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
