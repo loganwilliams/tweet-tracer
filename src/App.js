@@ -84,7 +84,7 @@ class App extends Component {
 
     let rows = [];
 
-    for (let d = 57; d < 85; d++) {
+    for (let d = 248; d < 256; d++) {
       let row = [
         <div className="label" key="label">
           {moment(d, "DDD").format("MMM Do")}
